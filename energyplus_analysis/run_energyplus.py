@@ -13,7 +13,7 @@ def run_energyplus(bldg_type, epw_file):
 
     cz_to_model = pd.read_csv(r'sim/data/ClimateZone_to_Model.csv')
     model = cz_to_model[cz_to_model['Thermal Zone'] == climate_zone]['Model'].item()
-    idf_file = f'sim/ASHRAE901_{bldg_type}_STD2019_{model}.idf'
+    idf_file = f'energyplus_analysis/sim/ASHRAE901_{bldg_type}_STD2019_{model}.idf'
 
     energyplus_install_dir = r'C:\EnergyPlusV9-0-1'
     cl_st = f'{energyplus_install_dir}\\EnergyPlus --help'
@@ -61,8 +61,8 @@ def calculate_carbon(model_output, meter_output, state):
     marginal_co2_kg = dict()
 
     for year in years:
-        aer = pd.read_csv(fr'sim/data/Cambium22_MidCase_hourly_{state}_{year}.csv', skiprows=5, header=0)['aer_load_co2e']
-        lrmer = pd.read_csv(fr'sim/data/Cambium22_MidCase_hourly_{state}_{year}.csv', skiprows=5, header=0)['lrmer_co2e']
+        aer = pd.read_csv(fr'energyplus_analysis/sim/data/Cambium22_MidCase_hourly_{state}_{year}.csv', skiprows=5, header=0)['aer_load_co2e']
+        lrmer = pd.read_csv(fr'energyplus_analysis/sim/data/Cambium22_MidCase_hourly_{state}_{year}.csv', skiprows=5, header=0)['lrmer_co2e']
         average_co2_kg[year] = meter_data['Net Electricity'] * aer / 3600000000
         marginal_co2_kg[year] = meter_data['Net Electricity'] * lrmer / 3600000000
 
@@ -75,7 +75,7 @@ def calculate_carbon(model_output, meter_output, state):
 
 def main():
     bldg_type = 'ApartmentMidRise'
-    epw_file = fr'sim/USA_WA_Seattle-Tacoma.Intl.AP.727930_TMYx.2007-2021.epw'
+    epw_file = fr'energyplus_analysis/sim/USA_WA_Seattle-Tacoma.Intl.AP.727930_TMYx.2007-2021.epw'
     model_output = fr'sim/eplustbl.csv'
     meter_output = fr'sim/eplusmtr.csv'
     state = 'WA'
