@@ -1,0 +1,20 @@
+Thermal Zone,Thermal Climate Zone Name,Weather Location,Weather Data,Representative City,Model
+0A,Extremely Hot Humid,"Ho Chi Minh City/Tan Son Nhat International Airport, Vietnam",See note*,"Ho Chi Minh City, Vietnam",HoChiMinhCity
+0B,Extremely Hot Dry,"Dubai International Airport, United Arab Emirates",See note*,"Dubai, United Arab Emirates",Dubai
+1A,Very Hot Humid,"Honolulu International Airport, Hawaii",EPW,"Honolulu, HI",Honolulu
+1B,Very Hot Dry,"New Delhi/Safdarjung Airport, Delhi, India",See note*,"New Delhi, India",NewDelhi
+2A,Hot Humid,"Tampa/MacDill AFB, Florida",EPW,"Tampa, FL",Tampa
+2B,Hot Dry,"Tucson/Davis-Monthan AFB, Arizona",EPW,"Tucson, AZ",Tucson
+3A,Warm Humid,"Atlanta/Hartsfield Jackson International Airport, Georgia",EPW,"Atlanta, GA",Atlanta
+3B,Warm Dry,"El Paso International Airport, Texas",EPW,"El Paso, TX",ElPaso
+3C,Warm Marine,"San Diego/Brown Field Municipal Airport, California",EPW,"San Diego, CA",SanDiego
+4A,Mixed Humid,"New York/John F Kennedy International Airport, New York",EPW,"New York, NY",NewYork
+4B,Mixed Dry,"Albuquerque International Sunport, New Mexico",EPW,"Albuquerque, NM",Albuquerque
+4C,Mixed Marine,"Seattle-Tacoma International Airport, Washington",EPW,"Seattle, WA",Seattle
+5A,Cool Humid,"Buffalo Niagara International Airport, New York",EPW,"Buffalo, NY",Buffalo
+5B,Cool Dry,"Denver/Aurora/Buckley AFB, Colorado",EPW,"Denver, CO",Denver
+5C,Cool Marine,"Port Angeles/William R Fairchild International Airport, Washington",EPW,"Port Angeles, WA",PortAngeles
+6A,Cold Humid,"Rochester International Airport, Minnesota",EPW,"Rochester, MN",Rochester
+6B,Cold Dry,"Great Falls International Airport, Montana",EPW,"Great Falls, MT",GreatFalls
+7,Very Cold,"International Falls International Airport, Minnesota",EPW,"International Falls, MN",InternationalFalls
+8,Subarctic/Arctic,"Fairbanks International Airport, Alaska",EPW,"Fairbanks, AK",Fairbanks
