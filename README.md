@@ -23,6 +23,11 @@ Sishe Jeff Chin, Margarita Ganeva, Heinrich Hoza, Daniel Mayall, Pawel Sapiecha,
 **ADD DASHBOARD SCREENSHOT?**
 
 
+## Screenshot
+
+![Screenshot](Assets/CarbonHacker_Screenshot.png)
+
+
 ## Framework
 
 The tool contains a python backend and javascript frontend.  From the user's zip code and building typology (e.g. single-family
