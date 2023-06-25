@@ -3,6 +3,7 @@
 Carbon Hacker is a web tool for home/building owners and designers to understand the current and future operational carbon
 emissions of their existing or proposed buildings due to their grid electricity and on-site fossil fuel usage, as well as the
 impact of PV on the net emissions.
+
 The only inputs required are a zip code, building type, building area, and annual electricity/gas consumption, the last of
 which home/building owners can get from their utility bills.
 The tool shows both the conventional average carbon emissions as well as [marginal emissions](https://lmnarchitects.com/lmn-research/13-operational-carbon-design-process),
@@ -14,14 +15,20 @@ average emissions for designers, and using a more accurate hourly energy and gri
 important time-based correlations between the grid generation mix (e.g. clean PV vs. dirty natural gas plants) and the
 building energy consumption.
 
+![](Assets/CarbonHacker_Screenshot.png)
+
 This project was part of the [2023 AECtech Hackathon in Seattle](https://www.aectech.us/seattle-hackathon).  It is open-source
 and relies entirely on other open-source tools and datasets.
 
 ### Team Members
-Sishe Jeff Chin, Margarita Ganeva, Heinrich Hoza, Daniel Mayall, Pawel Sapiecha, Chris Savage, Fendy Setiawan, Chuou Zhang
-
-**ADD DASHBOARD SCREENSHOT?**
-
+- Sishe Jeff Chin
+- Margarita Ganeva
+- Heinrich Hoza
+- Daniel Mayall
+- Pawel Sapiecha
+- Chris Savage
+- Fendy Setiawan
+- Chuou Zhang
 
 ## Screenshot
 
@@ -36,7 +43,9 @@ grid carbon emissions for a variety of building typologies and locations across 
 data to scale it to the user's provided building area and energy usage, then provides an interactive visualization using the
 open-source [D3.js](https://d3js.org/) and [Leaflet](https://leafletjs.com/) libraries. 
 
-The database is generated using the open-source [EnergyPlus energy modeling software](https://energyplus.net/),
+![](Assets/Workflow_Screenshot.png)
+
+The database is generated using the state-of-the-art open-source [EnergyPlus energy modeling software](https://energyplus.net/),
 publicly-available [DOE/PNNL prototype building models](https://www.energycodes.gov/prototype-building-models),
 publicly-available [OneBuilding.org weather files](https://climate.onebuilding.org/),
 and the publicaly-available [NREL Cambium grid carbon emissions data](https://scenarioviewer.nrel.gov/)
