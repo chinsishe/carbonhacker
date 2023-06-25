@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>run a script</title>
+    <script type="text/javascript" src="templates/ajax.js"></script>
+    <script type="text/javascript">
+      var do_stuff = null;
+      
+      window.onload = function()
+      {
+        do_stuff = (function()
+        {
+          return function()
+          {
+            var building_type_selector = document.getElementById("building_type");
+            
+            // get more parameter values here.
+            // get_output's signature is function(building_type, area, zipcode, electricity_consumption, electricity_eui, gas_consumption, gas_eui).
+            var result = get_output(building_type_selector.value, 1325, 98112, 12345.67, 42.0, 12345.67, 1123.58);
+            
+            var result_div = document.getElementById("result");
+            result_div.innerHTML = "latest result:<br>" + result.replaceAll(" ", "&nbsp;&nbsp;").replaceAll("\n", "<br />\n");
+          };
+        })();
+      };
+    </script>
+  </head>
+  <body style="background-color: #000000; color: #FFFFFF;">
+    <form>
+      <select id="building_type">
+        <option>ApartmentMidRise</option>
+        <option>OfficeMedium</option>
+      </select>
+      <br />
+      <!-- set more parameter values here. -->
+      <button type="button" onclick="do_stuff(); return false;">do a thing.</button>
+    </form>
+    <br />
+    <div id="result"></div>
+  </body>
+</html>

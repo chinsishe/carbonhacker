@@ -1,0 +1,18 @@
+{
+  "ZipCode": 12345, // x
+  "BuildingTypology": "ApartmentMidRise", // x
+  "Area": 123.4, // x
+  "Electricity_Consumption": 1234.5, // x
+  "FossilFuel_Consumption": 1234.5, // x
+  "WeatherFile": "Seattle", // x
+  "Electricity_EUI": 23.4,
+  "FossilFuel_EUI": 12.3,
+  "RefElectricity_EUI": 23.4,
+  "RefFossilFuel_EUI": 12.3,
+  "Years": [2022,2024,2026,2028,2030,...],
+  "FossilFuel_Emissions": [45.6,45.6,45.6,45.6,...],
+  "Electricity_AverageEmissions": [50.,45.,43.,41.,40.,...],
+  "Electricity_MarginalEmissions": [50.,45.,43.,41.,40.,...],
+  "PV_AverageEmissions": [50.,45.,43.,41.,40.,...],
+  "PV_MarginalEmissions": [50.,45.,43.,41.,40.,...],
+}
