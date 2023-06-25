@@ -55,5 +55,3 @@ data.
 ## Usage
 
 **TBD.**
-
-**INCORPORATE HEINRICH'S STUFF HERE**
