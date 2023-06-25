@@ -1,0 +1,258 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  /* background-color: #e8e8e8; */
+  /* color: #12cf64; */
+  /*   background-color: #000000;
+  color: #ffffff; */
+  background-color: #ffffff;
+  color: #000000;
+  /* background-color: #D0D0C5;
+  color: #01FE03; */
+  font-family: "Inter", sans-serif;
+  /* font-size: larger; */
+  font-size: small;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  font-family: "Inter", sans-serif;
+  font-size: small;
+  background-color: #e8e8e8;
+  /* color: #12cf64; */
+  color: #000000;
+  border-radius: 5px;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 60px; /* Adjust the width value as per your preference */
+  height: 20px;
+}
+
+select {
+  width: 120px; /* Adjust the width value as per your preference */
+  height: 20px;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+}
+
+/* header {
+  height: 100px;
+  background-color: #f8f9fa;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+footer {
+  height: 100px;
+  background-color: #f8f9fa;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+main {
+  padding-top: 100px;
+  padding-bottom: 100px;
+} */
+
+#data {
+  width: 10%;
+  height: 100%;
+  /* background-color: #e9ecef; */
+  float: left;
+  background-color: #e8e8e8;
+}
+
+.input-section,
+.numbers-section {
+  /* height: 50%; */
+  padding: 5px 20px 5px 20px;
+}
+
+.logo-section {
+  width: 100%;
+}
+.logo {
+  width: 100%;
+}
+
+#visualization {
+  width: 90%;
+  height: 100%;
+  /* background-color: #e9ecef; */
+  margin-left: 10%;
+}
+
+.input-section form label,
+.input-section form input,
+.input-section form select,
+.input-section form button {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.numbers-section {
+  display: flex;
+  flex-direction: column;
+}
+
+/* .numbers-section > div {
+  flex-basis: 50%;
+  padding: 20px;
+} */
+
+/* CSS for line chart */
+.line-fossil-fuel {
+  fill: black;
+  stroke: blue;
+  stroke-width: 2;
+}
+
+.line-electricity-average {
+  fill: none;
+  stroke: green;
+  stroke-width: 2;
+}
+
+.line-electricity-marginal {
+  fill: none;
+  stroke: red;
+  stroke-width: 2;
+}
+
+.line-pv-average {
+  fill: none;
+  stroke: orange;
+  stroke-width: 2;
+}
+
+.line-pv-marginal {
+  fill: none;
+  stroke: purple;
+  stroke-width: 2;
+}
+
+#map {
+  width: 100%;
+  height: 50vh;
+  z-index: 0;
+  opacity: 0.8;
+}
+
+#graph-section {
+  position: relative;
+  width: 100%;
+}
+
+#legend {
+  position: absolute;
+  top: 35px;
+  left: 35px;
+  z-index: 9999999999999999999999999999999; /* Adjust the ksz-index value as needed */
+  width: 10%;
+  opacity: 0.8;
+}
+
+#scale-bottom {
+  position: absolute;
+  bottom: 35px;
+  left: 40%;
+  z-index: 9999999999999999999999999999999; /* Adjust the ksz-index value as needed */
+  width: 100%;
+  opacity: 0.8;
+}
+
+#netAverageEmissions {
+  color: rgb(48, 166, 78);
+  text-decoration: underline;
+  font-size: medium;
+}
+#netMarginalEmissions {
+  color: rgb(13, 101, 48);
+  text-decoration: underline;
+  font-size: medium;
+}
+
+#netTotalAverageEmissions {
+  stroke: rgb(2, 28, 13);
+  text-decoration: underline;
+  font-size: medium;
+}
+
+#map-section {
+  position: relative;
+  width: 100%;
+}
+
+#icons-section {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 9999999999999999999999999999999; /* Adjust the ksz-index value as needed */
+  width: 10%;
+  opacity: 0.8;
+}
+
+.tree-icon,
+.car-icon {
+  width: 50px;
+  height: 50px;
+}
+
+#graph-section {
+  background-color: white;
+  padding: 25px 25px 50px 200px;
+  box-sizing: border-box;
+}
+#graph {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.graph-lines {
+  stroke-width: 2;
+  fill: none;
+}
+
+#lineNetAverageEmissions {
+  stroke: rgb(48, 166, 78);
+}
+
+#lineNetMarginalEmissions {
+  stroke: rgb(13, 101, 48);
+}
+
+#lineTotalAverageEmissions {
+  stroke: rgb(2, 28, 13);
+}
+
+unit {
+  font-size: 8px;
+}
+
+path.domain {
+  fill: none;
+  stroke: black;
+  marker-end: url(#xAxisArrowhead);
+}
+
+g.y-axis path.domain {
+  fill: none;
+  stroke: black;
+  marker-end: url(#yAxisArrowhead);
+}
+
