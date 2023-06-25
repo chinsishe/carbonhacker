@@ -5,6 +5,10 @@
     <title>Carbon Hacker</title>
     <link rel="stylesheet" type="text/css" href="main.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css" />
+    <script type="text/javascript" src="https://stamen-maps.a.ssl.fastly.net/js/tile.stamen.js?v1.3.0"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -15,10 +19,10 @@
             </div>
             <div class="input-section">
 
-                <h2>Input Section</h2>
+                <h2>HOUSEHOLD DETAILS</h2>
                 <form>
                     <label for="zip-code">Zip Code:</label>
-                    <input type="text" id="zip-code" name="zip-code" required  value="123">
+                    <input type="text" id="zip-code" name="zip-code" required value="123">
 
                     <label for="square-footage">Area (SF):</label>
                     <input type="number" id="square-footage" name="square-footage" required value="145">
@@ -31,10 +35,15 @@
                     </select>
 
                     <label for="electricity-consumption">Annual Electricity Consumption (kWh):</label>
-                    <input type="number" id="electricity-consumption" name="electricity-consumption" required  value="1345">
+                    <input type="number" id="electricity-consumption" name="electricity-consumption" required
+                        value="1345">
 
                     <label for="gas-consumption">Natural Gas Consumption (kWh):</label>
-                    <input type="number" id="gas-consumption" name="gas-consumption" required  value="120">
+                    <input type="number" id="gas-consumption" name="gas-consumption" required value="120">
+
+                    <label for="pv-area-slider">PV Area:</label>
+                    <input type="range" id="pv-area-slider" name="pv-area-slider" min="0" max="1" step="0.01"
+                        value="0.5">
 
                     <button type="submit" id="submit-button">Submit</button>
                 </form>
@@ -42,24 +51,43 @@
 
             <div class="numbers-section">
                 <div id="electricity-number">
-                    <h3>Electricity EUI (kBTU/sf/yr)</h3>
+                    <h3>Electricity EUI <unit>(kBTU/sf/yr)</unit>
+                    </h3>
                     <!-- Electricity number content -->
                 </div>
                 <div id="carbon-number">
-                    <h3>Natural Gas EUI (kBTU/sf/yr)</h3>
+                    <h3>Natural Gas EUI <unit>(kBTU/sf/yr)</unit>
+                    </h3>
                     <!-- Carbon number content -->
+                </div>
+                <div id="total-number">
+                    <h3>Total EUI <unit>(kBTU/sf/yr)</unit>
+                    </h3>
                 </div>
             </div>
         </section>
 
         <section id="visualization">
+            <div id="graph-section">
+                <div id="legend">
+                    Legend: <br>
+                    <div id="netAverageEmissions">Net Average Emissions</div>
+                    <div id="netMarginalEmissions">Net Marginal Emissions</div>
+                </div>
+
+                <div id="scale-bottom">2020 ................................................................................................................................................................................ 2050
+                </div>
+
+
+                <div id="graph"></div>
+            </div>
             <div id="map-section">
+                <div id="icons-section">
+                </div>
                 <div id="map"></div>
             </div>
-            <div id="graph-section">
-            </div>
-            <div id="icons-section">
-            </div>
+
+
         </section>
     </main>
 
